@@ -46,7 +46,7 @@
 .\_build\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\_build\main.o: ..\..\..\..\..\components\libraries\button\app_button.h
 .\_build\main.o: ..\..\..\..\..\components\drivers_nrf\hal\nrf_gpio.h
-.\_build\main.o: ..\..\..\..\..\examples\bsp\pca20006.h
+.\_build\main.o: ..\..\..\config\beagle_beacon.h
 .\_build\main.o: ..\..\..\..\common\ble_bcs\ble_bcs.h
 .\_build\main.o: ..\..\..\..\common\beacon\beacon.h
 .\_build\main.o: ..\..\..\..\..\components\ble\ble_services\ble_dfu\ble_dfu.h

@@ -343,14 +343,14 @@ ARM Macro Assembler    Page 6
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0 --apcs=interw
 ork --depend=.\_build\arm_startup_nrf51.d -o.\_build\arm_startup_nrf51.o -I"C:\
-Nordic Semiconductor\nRF51822 Beacon v1.1.1\Source Code\nrf51_beacon\ble_app_be
-acon\pca20006\s110\arm\RTE" -IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_Devic
-eFamilyPack\8.0.3\Device\Include -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__
-EVAL SETA 1" --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SET
-A 516" --predefine="NRF51 SETA 1" --predefine="NRF51 SETA 1" --predefine="BLE_S
-TACK_SUPPORT_REQD SETA 1" --predefine="S110 SETA 1" --predefine="SOFTDEVICE_PRE
-SENT SETA 1" --predefine="BOARD_PCA10028 SETA 1" --list=.\_build\arm_startup_nr
-f51.lst ..\..\..\..\..\components\toolchain\arm\arm_startup_nrf51.s
+Nordic Semiconductor\nRF51822 Beacon v1.1.1\Source Code\beagle_beacon_repo\beag
+le_beacon\pca20006\s110\arm\RTE" -IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_
+DeviceFamilyPack\8.0.3\Device\Include -IC:\Keil_v5\ARM\CMSIS\Include --predefin
+e="__EVAL SETA 1" --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSIO
+N SETA 516" --predefine="NRF51 SETA 1" --predefine="NRF51 SETA 1" --predefine="
+BLE_STACK_SUPPORT_REQD SETA 1" --predefine="S110 SETA 1" --predefine="SOFTDEVIC
+E_PRESENT SETA 1" --predefine="BOARD_PCA10028 SETA 1" --list=.\_build\arm_start
+up_nrf51.lst ..\..\..\..\..\components\toolchain\arm\arm_startup_nrf51.s
 
 
 

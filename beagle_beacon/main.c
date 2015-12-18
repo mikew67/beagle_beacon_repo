@@ -33,7 +33,8 @@
 #include "app_gpiote.h"
 #include "app_timer.h"
 #include "app_button.h"
-#include "pca20006.h"
+// #include "pca20006.h"
+#include "beagle_beacon.h"
 #include "ble_bcs.h"
 #include "ble_dfu.h"
 #include "dfu_app_handler_mod.h"
@@ -50,8 +51,10 @@
 #define LED_R_MSK                       (1UL << LED_RGB_RED)                            /**< Red LED bitmask */
 #define LED_G_MSK                       (1UL << LED_RGB_GREEN)                          /**< Green LED bitmask */
 #define LED_B_MSK                       (1UL << LED_RGB_BLUE)                           /**< Blue LED bitmask */
-#define APP_CONFIG_MODE_LED_MSK         (LED_R_MSK | LED_G_MSK)                     /**< Blinking yellow when device is in config mode */
-#define APP_BEACON_MODE_LED_MSK         (LED_R_MSK | LED_B_MSK)                     /**< Blinking purple when device is advertising as beacon */
+// #define APP_CONFIG_MODE_LED_MSK         (LED_R_MSK | LED_G_MSK)                     /**< Blinking yellow when device is in config mode */
+// #define APP_BEACON_MODE_LED_MSK         (LED_R_MSK | LED_B_MSK)                     /**< Blinking purple when device is advertising as beacon */
+#define APP_CONFIG_MODE_LED_MSK         LED_R_MSK                     /**< Blinking red when device is in config mode */
+#define APP_BEACON_MODE_LED_MSK         LED_R_MSK                     /**< Blinking red when device is advertising as beacon */
 
 #define ASSERT_LED_PIN_NO               LED_RGB_RED                                     /**< Red LED to indicate assert */
 
@@ -211,18 +214,19 @@ static void leds_init(void)
     led_sb_init_params_t led_sb_init_params;
     
     nrf_gpio_cfg_output(LED_RGB_RED);
-    nrf_gpio_cfg_output(LED_RGB_GREEN);
-    nrf_gpio_cfg_output(LED_RGB_BLUE);
+//    nrf_gpio_cfg_output(LED_RGB_GREEN);
+//    nrf_gpio_cfg_output(LED_RGB_BLUE);
     
     nrf_gpio_pin_set(LED_RGB_RED);
-    nrf_gpio_pin_set(LED_RGB_GREEN);
-    nrf_gpio_pin_set(LED_RGB_BLUE);
+//    nrf_gpio_pin_set(LED_RGB_GREEN);
+//    nrf_gpio_pin_set(LED_RGB_BLUE);
     
     led_sb_init_params.active_high     = false;
     led_sb_init_params.duty_cycle_max  = 20;
     led_sb_init_params.duty_cycle_min  = 0;
     led_sb_init_params.duty_cycle_step = 1;
-    led_sb_init_params.leds_pin_bm     = (LED_R_MSK | LED_G_MSK | LED_B_MSK);
+//    led_sb_init_params.leds_pin_bm     = (LED_R_MSK | LED_G_MSK | LED_B_MSK);
+    led_sb_init_params.leds_pin_bm     = LED_R_MSK;
     led_sb_init_params.off_time_ms     = 4000;
     led_sb_init_params.on_time_ms      = 0;
     

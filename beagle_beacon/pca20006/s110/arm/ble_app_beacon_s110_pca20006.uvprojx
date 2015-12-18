@@ -150,7 +150,7 @@
             <RestoreSysVw>1</RestoreSysVw>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>1</TargetSelection>
+          <TargetSelection>6</TargetSelection>
           <SimDlls>
             <CpuDll></CpuDll>
             <CpuDllArguments></CpuDllArguments>
@@ -164,7 +164,7 @@
             <PeripheralDll></PeripheralDll>
             <PeripheralDllArguments></PeripheralDllArguments>
             <InitializationFile></InitializationFile>
-            <Driver>BIN\UL2CM3.DLL</Driver>
+            <Driver>Segger\JL2CM3.dll</Driver>
           </TargetDlls>
         </DebugOption>
         <Utilities>
@@ -313,8 +313,8 @@
               </OCR_RVCT3>
               <OCR_RVCT4>
                 <Type>1</Type>
-                <StartAddress>0x16000</StartAddress>
-                <Size>0x29000</Size>
+                <StartAddress>0x18000</StartAddress>
+                <Size>0x28000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
@@ -338,8 +338,8 @@
               </OCR_RVCT8>
               <OCR_RVCT9>
                 <Type>0</Type>
-                <StartAddress>0x20002000</StartAddress>
-                <Size>0x2000</Size>
+                <StartAddress>0x20002800</StartAddress>
+                <Size>0x5800</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>
@@ -425,6 +425,11 @@
               <FileName>led_softblink.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\common\led_softblink\led_softblink.c</FilePath>
+            </File>
+            <File>
+              <FileName>beagle_beacon.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\config\beagle_beacon.h</FilePath>
             </File>
           </Files>
         </Group>
