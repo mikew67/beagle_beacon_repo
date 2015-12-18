@@ -1,0 +1,25 @@
+--cpu Cortex-M0
+".\_build\main.o"
+".\_build\led_softblink.o"
+".\_build\arm_startup_nrf51.o"
+".\_build\system_nrf51.o"
+".\_build\ble_advdata.o"
+".\_build\ble_conn_params.o"
+".\_build\ble_srv_common.o"
+".\_build\nrf_delay.o"
+".\_build\bootloader_util_arm.o"
+".\_build\dfu_app_handler_mod.o"
+".\_build\pstorage_mod.o"
+".\_build\app_button.o"
+".\_build\app_error.o"
+".\_build\app_gpiote.o"
+".\_build\app_scheduler.o"
+".\_build\app_timer.o"
+".\_build\nrf_assert.o"
+".\_build\softdevice_handler.o"
+".\_build\ble_bcs.o"
+".\_build\ble_dfu.o"
+--library_type=microlib --strict --scatter ".\_build\nrf51822_beacon_app.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\_build\nrf51822_beacon_app.map" -o .\_build\nrf51822_beacon_app.axf
